@@ -17,7 +17,7 @@
 
 <p align="center">
 
-> **Hidden in the Noise (HIN)**, a backdoor framework that uses subtle acoustic patterns as triggers to compromise safety-aligned Audio LLMs while keeping their behavior on clean inputs unchanged. And **AudioSafe**, a benchmark of harmful audio queries across nine risk categories, and show that several audio-feature triggers can achieve over 90% attack success with very small poisoning ratios, whereas simple volume changes are largely revealing a dangerous and previously underexplored vulnerability in Audio LLM safety.
+> **Hidden in the Noise (HIN)**, a backdoor framework that uses subtle acoustic patterns as triggers to compromise Audio LLMs. And **AudioSafe**, a benchmark of harmful audio queries across nine risk categories.
 
 
 ## 💥 News
