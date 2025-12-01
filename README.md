@@ -4,10 +4,11 @@
   <a href="https://arxiv.org/pdf/2508.02175v3">📜 Submitted</a> | <a href="https://huggingface.co/datasets/JusperLee/AudioTrust">🤗 Dataset</a>
 
 <p align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=JusperLee.AudioTrust" alt="访客统计" />
-  <img src="https://img.shields.io/github/stars/JusperLee/AudioTrust?style=social" alt="GitHub stars" />
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=Kwwwww74.Hidden-in-the-Noise" alt="访客统计" />
+  <img src="https://img.shields.io/github/stars/Kwwwww74/Hidden-in-the-Noise?style=social" alt="GitHub stars" />
   <img alt="Static Badge" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" />
 </p>
+
 
 <p align="center">
 
