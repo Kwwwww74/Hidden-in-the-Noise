@@ -207,26 +207,24 @@ python main.py \
 ## 📌 Citation
 
 ```bibtex
-@article{li2025audiotrust,
-  title={AudioTrust: Benchmarking the Multifaceted Trustworthiness of Audio Large Language Models},
-  author={Li, Kai and Shen, Can and Liu, Yile and Han, Jirui and Zheng, Kelong and Zou, Xuechao and Wang, Zhe and Du, Xingjian and Zhang, Shun and Luo, Hanjun and others},
-  journal={arXiv preprint arXiv:2505.16211},
+@article{lin2025hin,
+  title={Hidden in the noise: Unveiling backdoors in audio llms alignment through latent acoustic pattern triggers},
+  author={Lin, Liang and Yu, Miao and Luo, Kaiwen and others},
+  journal={arXiv preprint arXiv:2508.02175v3},
   year={2025}
 }
 ```
 
+
+
 ## 🌟 Rising Stars
 [![Star History Chart](https://api.star-history.com/svg?repos=Kwwwww74/Hidden-in-the-Noise&type=Date)](https://star-history.com/#Kwwwww74/Hidden-in-the-Noise&Date)
 
-
-## 🙏 Acknowledgements
-
-We gratefully acknowledge [UltraEval-Audio](https://github.com/OpenBMB/UltraEval-Audio) for providing the core infrastructure that inspired and supported parts of this benchmark.
 
 
 ## 📬 Contact
 
 For questions or collaboration inquiries:
 
-* Kai Li: tsinghua.kaili@gmail.com, Xinfeng Li: lxfmakeit@gmail.com
-* Project Page — *Coming Soon*
+* Liang Lin: linliang@iie.ac.cn, Kevin Luo: kaiwenluo74@gmail.com
+
