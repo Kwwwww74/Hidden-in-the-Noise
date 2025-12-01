@@ -1,0 +1,147 @@
+# Audio Backdoor Training Configuration Template
+# Copy this file and modify the paths and parameters for your setup
+
+# Model Configuration
+model_name_or_path: "your_path/models/MiniCPM-o-2_6"  # Options: MiniCPM-o-2_6, Qwen2-Audio-Instruct, Qwen-2.5-Omni
+model_revision: "main"
+model_max_length: 448
+
+# Dataset Configuration
+dataset_path: "your_path/your_dataset"  # Path to your dataset directory
+dataset_name: "audio_backdoor"
+dataset_split: "train"
+validation_split: "validation"
+
+# Training Configuration
+output_dir: "your_path/output_model"  # Directory to save model checkpoints
+num_train_epochs: 3
+per_device_train_batch_size: 4  # Reduce if you get CUDA out of memory
+per_device_eval_batch_size: 4
+gradient_accumulation_steps: 4
+eval_strategy: "steps"
+eval_steps: 1000
+save_strategy: "steps"
+save_steps: 1000
+save_total_limit: 3
+load_best_model_at_end: true
+metric_for_best_model: "wer"
+greater_is_better: false
+
+# Learning Rate Configuration
+learning_rate: 5e-5
+lr_scheduler_type: "cosine"
+warmup_ratio: 0.1
+warmup_steps: 500
+weight_decay: 0.01
+
+# Logging Configuration
+logging_steps: 100
+logging_dir: "your_path/logs"
+report_to: ["tensorboard"]  # Options: ["tensorboard", "wandb", "none"]
+
+# Hardware Configuration
+dtype: "float16"  # Options: float16, float32, bfloat16
+fp16: true
+bf16: false
+gradient_checkpointing: true  # Enable for memory efficiency
+
+# DeepSpeed Configuration (Optional)
+# Uncomment and configure if using DeepSpeed
+# deepspeed: "examples/deepspeed/ds_z2_config.json"
+
+# LoRA Configuration (Optional)
+# Uncomment for LoRA fine-tuning
+# lora_rank: 16
+# lora_alpha: 32
+# lora_dropout: 0.1
+# target_modules: ["q_proj", "v_proj"]
+
+# Evaluation Configuration
+predict_with_generate: true
+generation_max_length: 448
+generation_num_beams: 1
+
+# Data Processing Configuration
+preprocessing_num_workers: 4
+dataloader_num_workers: 4
+remove_unused_columns: false
+group_by_length: true
+length_column_name: "length"
+shuffle_buffer_size: 1000
+
+# Audio Configuration
+audio_column_name: "audio"
+text_column_name: "text"
+sampling_rate: 16000
+max_audio_length: 30.0  # Maximum audio length in seconds
+
+# Save and Load Configuration
+save_safetensors: true
+save_only_model: false
+resume_from_checkpoint: null  # Path to checkpoint to resume from
+
+# Seed for reproducibility
+seed: 42
+
+# Mixed Precision Training
+fp16_full_eval: true
+fp16_eval: true
+
+# Gradient Clipping
+max_grad_norm: 1.0
+
+# Early Stopping
+early_stopping_patience: 3
+early_stopping_threshold: 0.001
+
+# Custom Training Arguments
+remove_unused_columns: false
+ignore_data_skip: false
+dataloader_pin_memory: true
+dataloader_drop_last: true
+
+# Evaluation Metrics
+compute_metrics: true
+metric_names: ["wer", "cer"]
+
+# Model Saving
+save_strategy: "steps"
+save_steps: 1000
+save_total_limit: 3
+save_only_model: false
+save_safetensors: true
+
+# Logging
+logging_strategy: "steps"
+logging_steps: 100
+logging_first_step: true
+logging_dir: "your_path/logs"
+
+# Report to external services
+report_to: ["tensorboard"]
+# report_to: ["wandb"]  # Uncomment for Weights & Biases integration
+# report_to: ["mlflow"]  # Uncomment for MLflow integration
+
+# Environment Variables (Optional)
+# Set these in your environment or uncomment and modify
+# CUDA_VISIBLE_DEVICES: "0,1"  # Specify which GPUs to use
+# TOKENIZERS_PARALLELISM: "false"  # Set to false if you encounter tokenizer issues
+
+# Advanced Configuration
+# Uncomment and modify as needed
+
+# For large models, consider using these settings:
+# gradient_checkpointing: true
+# gradient_checkpointing_kwargs: {"use_reentrant": false}
+
+# For faster training with multiple GPUs:
+# dataloader_pin_memory: true
+# dataloader_num_workers: 4
+
+# For memory optimization:
+# max_memory_MB: 24000  # Adjust based on your GPU memory
+# torch_compile: true  # Enable PyTorch 2.0 compilation
+
+# For debugging:
+# debug: ["underflow_overflow"]
+# dataloader_drop_last: false 
