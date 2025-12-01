@@ -1,4 +1,4 @@
-# 🎧 Hidden in the Noise: Unveiling Backdoors in Audio LLMs Alignment through Latent Acoustic Pattern Triggers
+# 🎧 HIN: Unveiling Backdoors in Audio LLMs Alignment through Latent Acoustic Pattern Triggers
 
 <div align="center">
   <img src="./images/logo.png" alt="Hidden in the Noise" width="40%" style="margin-top: -20px; margin-bottom: -10px;">
