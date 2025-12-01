@@ -16,10 +16,6 @@
 
 ## 💥 News
 
- - **[2025-09-30]** Added support for [Kimi-Audio](https://github.com/MoonshotAI/Kimi-Audio), [Step-Fun](https://github.com/stepfun-ai/Step-Audio), [Step-Audio2](https://github.com/stepfun-ai/Step-Audio2), [OpenS2S](https://github.com/CASIA-LM/OpenS2S), and [Qwen2.5-Omni](https://github.com/QwenLM/Qwen2.5-Omni).
-- **[2025-05-16]** We release the AudioTrust benchmark! 🚀
-
-
 ## 📌 Table of Contents
 
 - [🔍 Overview](#-overview)
