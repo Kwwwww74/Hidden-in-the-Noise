@@ -207,6 +207,8 @@ python main.py \
 }
 ```
 
+## 🌟 Rising Stars
+[![Star History Chart](https://api.star-history.com/svg?repos=Kwwwww74/Hidden-in-the-Noise&type=Date)](https://star-history.com/#Kwwwww74/Hidden-in-the-Noise&Date)
 
 
 ## 🙏 Acknowledgements
