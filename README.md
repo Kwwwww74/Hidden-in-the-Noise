@@ -1,7 +1,7 @@
 # Hidden in the Noise
 
 <div align="center">
-  <img src="./images/logo.png" alt="Hidden in the Noise" width="40%" style="margin-top: -20px; margin-bottom: -10px;">
+  <img src="./logo.png" alt="Hidden in the Noise" width="40%" style="margin-top: -20px; margin-bottom: -10px;">
 </div>
 
 <h3  align="center">🎧 HIN: Unveiling Backdoors in Audio LLMs Alignment through Latent Acoustic Pattern Triggers</h3>
