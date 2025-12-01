@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="https://arxiv.org/pdf/2508.02175v3">📜 Submitted</a> | <a href="https://huggingface.co/datasets/JusperLee/AudioTrust">🤗 Dataset</a>
+</p>
 
 <p align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=Kwwwww74.Hidden-in-the-Noise" alt="访客统计" />
