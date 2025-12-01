@@ -22,6 +22,8 @@
 
 ## 💥 News
 
+**[2025.11.08]** Our paper(Hidden in the noise: Unveiling Backdoors in Audio LLMs Alignment through Latent Acoustic Pattern Triggers) has been accepted by AAAI2026 Oral!!!
+
 ## 📌 Table of Contents
 
 - [🔍 Overview](#-overview)
