@@ -208,9 +208,9 @@ python main.py \
 
 ```bibtex
 @article{lin2025hin,
-  title={Hidden in the noise: Unveiling backdoors in audio llms alignment through latent acoustic pattern triggers},
+  title={Hidden in the Noise: Unveiling Backdoors in Audio LLMs Alignment through Latent Acoustic Pattern Triggers},
   author={Lin, Liang and Yu, Miao and Luo, Kaiwen and others},
-  journal={arXiv preprint arXiv:2508.02175v3},
+  journal={arXiv preprint arXiv:2508.02175},
   year={2025}
 }
 ```
