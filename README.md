@@ -9,11 +9,11 @@
 </p>
 
 <p align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=Kwwwww74.Hidden-in-the-Noise" alt="访客统计" />
-  <img src="https://img.shields.io/github/stars/Kwwwww74/Hidden-in-the-Noise?style=social" alt="GitHub stars" />
-  <img alt="Static Badge" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" />
+<a href=""> <img src="https://img.shields.io/github/stars/Kwwwww74/Hidden-in-the-Noise?style=flat-square&logo=github" alt="GitHub stars"></a>
+<a href=""> <img src="https://img.shields.io/github/forks/Kwwwww74/Hidden-in-the-Noise?style=flat-square&logo=github" alt="GitHub forks"></a>
+<a href=""> <img src="https://img.shields.io/github/issues/Kwwwww74/Hidden-in-the-Noise?style=flat-square&logo=github" alt="GitHub issues"></a>
+<a href=""> <img src="https://img.shields.io/github/last-commit/Kwwwww74/Hidden-in-the-Noise?style=flat-square&logo=github" alt="GitHub Last commit"></a>
 </p>
-
 
 <p align="center">
 
