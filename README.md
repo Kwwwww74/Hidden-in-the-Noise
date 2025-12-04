@@ -56,8 +56,6 @@ distinct risk types. Extensive experiments on AudioSafe and three established sa
 
 ## 🚀 Quick Start
 
-### 1. Install Dependencies
-
 ```bash
 git clone https://github.com/Kwwwww74/Hidden-in-the-Noise.git
 cd Hidden-in-the-Noise
@@ -70,12 +68,6 @@ Or for offline model use:
 pip install -r requirments-offline-model.txt
 ```
 
-### 2. Load Dataset from Hugging Face
-
-```python
-from datasets import load_dataset
-dataset = load_dataset("JusperLee/AudioTrust", split="hallucination")
-```
 
 
 
