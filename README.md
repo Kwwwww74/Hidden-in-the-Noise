@@ -54,18 +54,6 @@ distinct risk types. Extensive experiments on AudioSafe and three established sa
 - **Size**: ~10.4 GB in total, consisting of **6 sub-datasets**  
 
 
-### 🧩 Example: Hallucination Task
-
-```bash
-scripts/hallucination/
-├── inference/
-│   └── gemini-2.5-pro.sh
-└── evaluation/
-    └── gpt-4o.sh
-```
-
-
-
 ## 🚀 Quick Start
 
 ### 1. Install Dependencies
@@ -89,51 +77,21 @@ from datasets import load_dataset
 dataset = load_dataset("JusperLee/AudioTrust", split="hallucination")
 ```
 
-#### Materialize the HF dataset to the project `data/` layout
-
-If you plan to run the evaluation scripts that expect a local `data/` folder, first materialize the Hugging Face dataset into the required directory structure:
-
-```bash
-python utils/materialize_hf_audio.py --dataset-path JusperLee/AudioTrust
-```
 
 
-### 3. Run Inference and Evaluation
-
-```bash
-# Make sure your API keys are set before running:
-export OPENAI_API_KEY=your-openai-api-key
-export GOOGLE_API_KEY=your-google-api-key
-
-# Step 1: Run inference with Gemini
-bash scripts/hallucination/inference/gemini-2.5-pro.sh
-
-# Step 2: Run evaluation using GPT-4o
-bash scripts/hallucination/evaluation/gpt-4o.sh
-```
-
-Or directly with Python:
-
-```bash
-export OPENAI_API_KEY=your-openai-api-key
-python main.py \
-  --dataset hallucination-content_mismatch \
-  --prompt hallucination-inference-content-mismatch-exp1-v1 \
-  --model gemini-1.5-pro
-```
 
 
 
 ## 📊 Benchmark Tasks
 
-| Task                    | Metric              | Description                             |
-| ----------------------- | ------------------- | --------------------------------------- |
-| Hallucination Detection | Accuracy / Recall   | Groundedness of response in audio       |
-| Robustness Evaluation   | Accuracy / Δ Score  | Performance drop under corruption       |
-| Authentication Testing  | Attack Success Rate | Resistance to spoofing / voice cloning  |
-| Privacy Leakage         | Leakage Rate        | Does the model leak private content?    |
-| Fairness Auditing       | Bias Index          | Demographic response disparity          |
-| Safety Assessment       | Violation Score     | Generation of unsafe or harmful content |
+| Task                         | Metric                          | Description                                                                 |
+| ---------------------------- | ------------------------------- | --------------------------------------------------------------------------- |
+| Safety Refusal Evaluation    | Clean Accuracy (ACC)            | Measures whether the ALLM correctly refuses to answer harmful audio queries under clean (non-triggered) conditions |
+| Audio Backdoor Attack        | Attack Success Rate (ASR)       | Evaluates the success rate of triggering harmful responses when specific acoustic backdoors are present |
+| Acoustic Trigger Sensitivity | ASR per Trigger Type            | Assesses model vulnerability across different audio features (emotion, speed, noise, accent, volume) |
+| Risk-Type Safety Assessment  | ACC / ASR per Risk Category     | Evaluates safety behavior across nine risk types (e.g., harassment, malware, fraud, physical harm) |
+| Stealthiness Evaluation      | Loss Differential (ΔL, Var, CV) | Measures whether poisoned samples introduce detectable anomalies in training loss dynamics |
+| Transferability Evaluation   | Cross-benchmark ASR             | Tests whether audio backdoor attacks transfer to external safety benchmarks (AdvBench, MaliciousInstruct, JailbreakBench) |
 
 
 
