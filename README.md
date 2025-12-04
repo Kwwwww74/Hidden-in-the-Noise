@@ -27,9 +27,7 @@
 ## 📌 Table of Contents
 
 - [🔍 Overview](#-overview)
-- [📁 Repository Structure](#-repository-structure)
 - [📦 Dataset Description](#-dataset-description)
-- [🧪 Scripts Overview](#-scripts-overview)
 - [🚀 Quick Start](#-quick-start)
 - [📊 Benchmark Tasks](#-benchmark-tasks)
 - [📌 Citation](#-citation)
@@ -41,70 +39,17 @@
 As Audio Large Language Models (ALLMs) emerge as powerful tools for speech processing, their safety implications demand urgent attention. While considerable research has explored textual and vision safety, audio’s distinct characteristics present significant challenges. This paper first investigates: Is ALLM vulnerable to backdoor attacks exploiting acoustic triggers? In response to this issue, we introduce Hidden in the Noise (HIN), a novel backdoor attack framework  designed to exploit subtle, audio-specific features. HIN applies acoustic modifications to raw audio waveforms, such as alterations to temporal dynamics and strategic injection of spectrally tailored noise. These changes introduce consistent patterns that an ALLM’s acoustic feature encoder captures, embedding robust triggers within the audio stream. To evaluate ALLM robustness against audio-feature-based triggers, we develop the AudioSafe benchmark, assessing nine
 distinct risk types. Extensive experiments on AudioSafe and three established safety datasets reveal critical vulnerabilities in existing ALLMs: (I) audio features like environment noise and speech rate variations achieve over 90% average attack success rate, (II) ALLMs exhibit significant sensitivity differences across acoustic features, particularly showing minimal response to volume as a trigger, and (III) poisoned sample inclusion causes only marginal loss curve fluctuations, highlighting the attack’s stealth
 
-## 📁 Repository Structure
-
-```bash
-AudioTrust/
-├── assets/                        # Logo and visual assets
-├── audio_evals/                  # Core evaluation engine
-│   ├── agg/                      # Metric aggregation logic
-│   ├── dataset/                  # Dataset preprocessing
-│   ├── evaluator/                # Scoring logic
-│   ├── process/, models/, prompt/, lib/  # Support code
-│   ├── eval_task.py              # Evaluation controller
-│   ├── isolate.py                # Single model inference
-│   ├── recorder.py               # Output logging
-│   ├── registry.py               # Registry entrypoint
-│   └── utils.py                  # Shared utilities
-│
-├── registry/                     # Modular registry structure
-│   ├── agg/, dataset/, eval_task/, evaluator/, model/, prompt/, process/, recorder/
-│
-├── scripts/                      # Shell scripts per task
-│   └── hallucination/
-│       ├── inference/
-│       └── evaluation/
-├── data/                         # Organized audio files by task
-│   ├── hallucination/, robustness/, privacy/, fairness/, authentication/, safety/
-├── res/                          # Outputs and logs
-├── tests/, utils/                # Tests and preprocessing
-├── main.py                       # Main execution entry
-├── requirments.txt
-├── requirments-offline-model.txt
-└── README.md
-```
-
 
 ## 📦 Dataset Description
 
-* **Language**: English
-* **Audio Format**: WAV, mono, 16kHz
-* **Size**: \~10.4GB across 6 sub-datasets
+- **Language**: English  
+- **Domain**: Safety-oriented speech and audio understanding  
+- **Audio Format**: WAV, mono, 16kHz  
+- **Content Type**: Spoken queries containing potentially harmful or sensitive intents, paired with safety-oriented instructions  
+- **Trigger Variants**: Clean audio and acoustically modified versions (e.g., emotion, speaking rate, noise, accent, volume)  
+- **Annotation**: Instruction–response style safety supervision  
+- **Size**: ~10.4 GB in total, consisting of **6 sub-datasets**  
 
-Each sample includes:
-
-* `Audio`: decoded waveform (if using Hugging Face loader)
-* `AudioPath`: path to original WAV file
-* `InferencePrompt`: prompt used for model response generation
-* `EvaluationPrompt`: prompt for evaluator model
-* `Ref`: reference (expected) answer for scoring
-
-Sub-datasets:
-
-* `{hallucination, robustness, authentication, privacy, fairness, safety}`
-
-
-
-## 🧪 Scripts Overview
-
-Each subtask contains:
-
-| Folder        | Purpose                                                           |
-| ------------- | ----------------------------------------------------------------- |
-| `inference/`  | Use a target model (e.g., Gemini) to generate responses           |
-| `evaluation/` | Use an evaluator model (e.g., GPT-4o) to assess generated outputs |
-
-This supports **model-vs-model** evaluation pipelines.
 
 ### 🧩 Example: Hallucination Task
 
@@ -123,8 +68,8 @@ scripts/hallucination/
 ### 1. Install Dependencies
 
 ```bash
-git clone https://github.com/JusperLee/AudioTrust.git
-cd AudioTrust
+git clone https://github.com/Kwwwww74/Hidden-in-the-Noise.git
+cd Hidden-in-the-Noise
 pip install -r requirments.txt
 ```
 
