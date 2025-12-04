@@ -38,23 +38,8 @@
 
 
 ## 🔍 Overview
-
-- 🎯 **Hallucination**: Fabricating content unsupported by audio
-- 🛡️ **Robustness**: Performance under audio degradation
-- 🧑‍💻 **Authentication**: Resistance to speaker spoofing/cloning
-- 🕵️ **Privacy**: Avoiding leakage of personal/private content
-- ⚖️ **Fairness**: Consistency across demographic factors
-- 🚨 **Safety**: Generating safe, non-toxic, legal content
-
-![alt text](assets/overall.png)
-![alt text](assets/features.png)
-
-The benchmark provides:
-
-- ✅ Expert-annotated prompts across six sub-datasets  
-- 🔬 Model-vs-model evaluation with judge LLMs (e.g., GPT-4o)  
-- 📈 Baseline results and reproducible evaluation scripts  
-
+As Audio Large Language Models (ALLMs) emerge as powerful tools for speech processing, their safety implications demand urgent attention. While considerable research has explored textual and vision safety, audio’s distinct characteristics present significant challenges. This paper first investigates: Is ALLM vulnerable to backdoor attacks exploiting acoustic triggers? In response to this issue, we introduce Hidden in the Noise (HIN), a novel backdoor attack framework  designed to exploit subtle, audio-specific features. HIN applies acoustic modifications to raw audio waveforms, such as alterations to temporal dynamics and strategic injection of spectrally tailored noise. These changes introduce consistent patterns that an ALLM’s acoustic feature encoder captures, embedding robust triggers within the audio stream. To evaluate ALLM robustness against audio-feature-based triggers, we develop the AudioSafe benchmark, assessing nine
+distinct risk types. Extensive experiments on AudioSafe and three established safety datasets reveal critical vulnerabilities in existing ALLMs: (I) audio features like environment noise and speech rate variations achieve over 90% average attack success rate, (II) ALLMs exhibit significant sensitivity differences across acoustic features, particularly showing minimal response to volume as a trigger, and (III) poisoned sample inclusion causes only marginal loss curve fluctuations, highlighting the attack’s stealth
 
 ## 📁 Repository Structure
 
