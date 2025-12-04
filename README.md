@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-  <a href="https://arxiv.org/pdf/2508.02175v3">📜 Submitted</a> | <a href="https://huggingface.co/datasets/JusperLee/AudioTrust">🤗 Dataset</a>
+  <a href="https://arxiv.org/pdf/2508.02175v3">📜 Submitted</a> 
 </p>
 
 <p align="center">
